@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Healthcare Insights</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<div class="nav">
+<h2>City Hospital</h2>
+<ul>
+<li><a href="index.html">Home</a></li>
+</ul>
+</div>
+</header>
+
+<section class="insights">
+
+<h2>Healthcare Insights</h2>
+<p>Read about success stories, news & expert blogs</p>
+
+<div class="tabs">
+<button class="active" onclick="showTab('success',this)">Success Stories</button>
+<button onclick="showTab('news',this)">News & Articles</button>
+<button onclick="showTab('blogs',this)">Blogs From Experts</button>
+</div>
+
+<a href="insights.html" class="view-more">View All</a>
+
+<!-- SUCCESS -->
+<div id="success" class="tab-content active">
+<div class="insight-grid">
+
+<div class="insight-card">
+<img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d">
+<div class="overlay">Heart & Kidney Treatment</div>
+</div>
+
+<div class="insight-card">
+<img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
+<div class="overlay">Child Heart Surgery</div>
+</div>
+
+<div class="insight-card">
+<img src="https://images.unsplash.com/photo-1584515933487-779824d29309">
+<div class="overlay">Patient Recovery</div>
+</div>
+
+<div class="insight-card">
+<img src="https://images.pexels.com/photos/305568/pexels-photo-305568.jpeg">
+
+<div class="overlay">Cancer Care Success</div>
+</div>
+
+</div>
+</div>
+
+<!-- NEWS -->
+<div id="news" class="tab-content">
+<div class="insight-grid">
+
+<div class="insight-card">
+<img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5">
+<div class="overlay">Hospital Expansion</div>
+</div>
+
+<div class="insight-card">
+<img src="https://images.unsplash.com/photo-1538108149393-fbbd81895907">
+<div class="overlay">Medical Camp</div>
+</div>
+
+<div class="insight-card">
+<img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118">
+<div class="overlay">New ICU Launch</div>
+</div>
+
+<div class="insight-card">
+<img src="https://images.unsplash.com/photo-1579154204601-01588f351e67">
+<div class="overlay">Doctors Meet</div>
+</div>
+
+</div>
+</div>
+
+<!-- BLOGS -->
+<div id="blogs" class="tab-content">
+<div class="insight-grid">
+
+<div class="insight-card">
+<img src="https://images.pexels.com/photos/6129685/pexels-photo-6129685.jpeg">
+<div class="overlay">Heart Attack Tips</div>
+</div>
+
+<div class="insight-card">
+<img src="https://images.unsplash.com/photo-1584515933487-779824d29309">
+<div class="overlay">Healthy Lifestyle</div>
+</div>
+
+<div class="insight-card">
+<img src="https://images.pexels.com/photos/8460174/pexels-photo-8460174.jpeg">
+<div class="overlay">Cancer Awareness</div>
+</div>
+
+<div class="insight-card">
+<img src="https://images.unsplash.com/photo-1579154204601-01588f351e67">
+<div class="overlay">Doctor Advice</div>
+</div>
+
+</div>
+</div>
+
+</section>
+
+<script>
+function showTab(id,btn){
+document.querySelectorAll('.tab-content').forEach(e=>e.classList.remove('active'));
+document.querySelectorAll('.tabs button').forEach(b=>b.classList.remove('active'));
+document.getElementById(id).classList.add('active');
+btn.classList.add('active');
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>City Hospital</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+<header>
+<div class="nav">
+<h2>City Hospital</h2>
+
+<ul>
+<li>Home</li>
+<li>
+   <a href="doctors.html">Doctors</a></li>
+<li>
+     <a href="services.html">Services</a>
+</li>
+<li><a href="contact.html" class="active">Contact</a></li>
+<li>
+    <a href="centres.html">Centres</a>
+</li>
+</ul>
+</div>
+</header>
+
+<section class="slider">
+
+<img id="slideImage" src="https://images.unsplash.com/photo-1666214280557-f1b5022eb634">
+
+<div class="slider-text">
+<h1>Trusted Healthcare For Your Family</h1>
+<p>Advanced treatments with expert doctors</p>
+<button>Book Appointment</button>
+</div>
+
+</section>
+
+<script>
+let images = [
+"https://images.unsplash.com/photo-1666214280557-f1b5022eb634",
+"https://images.unsplash.com/photo-1538108149393-fbbd81895907",
+"https://images.unsplash.com/photo-1584515933487-779824d29309"
+];
+
+let i = 0;
+
+setInterval(()=>{
+i++;
+if(i>=images.length){i=0;}
+document.getElementById("slideImage").src = images[i];
+},4000);
+</script>
+
+
+
+</section>
+
+<div class="service-box">
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118">
+<h3>Cardiology</h3>
+<p>Advanced heart care by expert doctors.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1559757175-5700dde675bc">
+<h3>Neurology</h3>
+<p>Brain & nerve treatments with modern tech.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5">
+<h3>Orthopaedics</h3>
+<p>Bone & joint care specialists.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1579684453423-f84349ef60b0">
+
+<h3>General Surgery</h3>
+<p>Safe surgical procedures.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09">
+<h3>Pediatrics</h3>
+<p>Child care & vaccination.</p>
+</div>
+
+<div class="card">
+<img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
+
+<h3>Radiology</h3>
+<p>Digital imaging & diagnosis.</p>
+</div>
+
+</div>
+
+</div>
+<section class="insights">
+
+<h2>Healthcare Insights</h2>
+<p class="sub">Read about success stories, news updates and expert blogs</p>
+
+<div class="tabs">
+<button onclick="showTab('success')" class="active">Success Stories</button>
+<button onclick="showTab('news')">News & Articles</button>
+<button onclick="showTab('blogs')">Blogs From Experts</button>
+<button onclick="window.location.href='insights.html'">View All</button>
+>
+</div>
+
+<!-- SUCCESS -->
+
+<div id="success" class="tab-content active">
+
+<div class="insight-grid">
+
+<div class="insight-card">
+<img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d">
+<div class="overlay">Heart & Kidney Treatment</div>
+</div>
+
+<div class="insight-card">
+<img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b">
+<div class="overlay">Child Heart Surgery</div>
+</div>
+
+</div>
+</div>
+
+<!-- NEWS -->
+
+<div id="news" class="tab-content">
+
+<div class="insight-grid">
+
+<div class="insight-card">
+<img src="https://images.unsplash.com/photo-1538108149393-fbbd81895907">
+<div class="overlay">Hospital Expansion News</div>
+</div>
+
+<div class="insight-card">
+<img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5">
+<div class="overlay">Medical Camp Update</div>
+</div>
+
+</div>
+</div>
+
+<!-- BLOGS -->
+
+<div id="blogs" class="tab-content">
+
+<div class="insight-grid">
+
+<div class="insight-card">
+<img src="https://images.pexels.com/photos/8460174/pexels-photo-8460174.jpeg">
+
+
+<div class="overlay">Heart Attack Prevention</div>
+</div>
+
+<div class="insight-card">
+<img src="https://images.unsplash.com/photo-1584515933487-779824d29309">
+<div class="overlay">Healthy Living Tips</div>
+</div>
+
+</div>
+</div>
+
+</section>
+<section class="chairman">
+
+<div class="chairman-box">
+
+<div class="chairman-img">
+<img src="https://images.pexels.com/photos/8460157/pexels-photo-8460157.jpeg">
+</div>
+
+<div class="chairman-text">
+
+<h2>Message From Our Chairman</h2>
+<h4>Dr. Devi Prasad Shetty</h4>
+
+<p>
+Back in the day, we realised that just as innovation in medical science is elementary to the growth of healthcare, we need to bring innovation in how we take quality healthcare to everyone.
+</p>
+
+<p>
+We realised that it is not merely a transaction of health services between a patient and doctor. It is trust that fosters a healthy relationship in the journey of health.
+</p>
+
+<p>
+As we move with the times, we realise that technology has a huge role in making our services way more efficient and human.
+</p>
+
+<p>
+We have a dream. Our dream is to be available to you round the clock, wherever you are and whenever you want. We want to be just one tap away from you.
+</p>
+
+</div>
+
+</div>
+</section>
+
+<script>
+function showTab(tab){
+document.querySelectorAll('.tab-content').forEach(e=>e.classList.remove('active'));
+document.querySelectorAll('.tabs button').forEach(b=>b.classList.remove('active'));
+
+document.getElementById(tab).classList.add('active');
+event.target.classList.add('active');
+}
+</script>
+
+
+<footer class="main-footer">
+
+<div class="footer-top">
+
+<div class="footer-col">
+<h3>City Hospital</h3>
+<p>Connect With Us</p>
+
+<input type="email" placeholder="Enter your email ID">
+<button>Subscribe</button>
+
+<h4>Download The App</h4>
+<img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" class="store">
+<img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" class="store">
+</div>
+
+<div class="footer-col">
+<h4>Patient Guide</h4>
+<p>Find a Doctor</p>
+<p>Book Appointment</p>
+<p>Video Consultation</p>
+<p>Feedback</p>
+</div>
+
+<div class="footer-col">
+<h4>Common Searches</h4>
+<p>Chest Pain</p>
+<p>Heart Attack</p>
+<p>Varicose Veins</p>
+<p>Thyroid Problems</p>
+<p>View All</p>
+</div>
+
+<div class="footer-col">
+<h4>Company</h4>
+<p>About Us</p>
+<p>Leadership</p>
+<p>News & Media</p>
+<p>Careers</p>
+<p>CSR</p>
+<p>Contact Us</p>
+</div>
+
+</div>
+
+<div class="footer-bottom">
+<p>© 2026 City Hospital | All Rights Reserved</p>
+</div>
+
+</footer>
+
+</body>
+</html>
